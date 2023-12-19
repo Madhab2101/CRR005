@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Creative Music Player</title>
+</head>
+<body>
+    <div class="music-player">
+        <audio id="audioPlayer" controls>
+            <source src="https://shorturl.at/jogJM" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="player-controls">
+            <button id="playPauseBtn">&#9658;</button>
+            <input type="range" id="seekBar" value="0">
+            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+            <button id="muteBtn">&#128266;</button>
+            <input type="range" id="volumeBar" value="100">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
