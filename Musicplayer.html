@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Creative Music Player</title>
-</head>
+    <style>
+    .image-over-background img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+    }
+</style>
 <body>
+    <div class="music-player">
+        <div class="player-details">
+            <img src="R.png" alt="Song Title"/><br>
+            <h2>Song Title</h2><br>
+            <h3>Artist Name</h3><br>
+        </div>
+        <div class="player-controls">
+            <button id="playButton">Play</button><br><br>
+            <button id="autoplayButton">Autoplay</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
     <div class="music-player">
         <audio id="audioPlayer" controls>
             <source src="https://shorturl.at/jogJM" type="audio/mp3">
-            Your browser does not support the audio element.
+            
         </audio>
         <div class="player-controls">
             <button id="playPauseBtn">&#9658;</button>
             <input type="range" id="seekBar" value="0">
             <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
             <button id="muteBtn">&#128266;</button>
+            <button id="repeatBtn">&#8634;</button>
             <input type="range" id="volumeBar" value="100">
+            
+            <label for="speedControl">Speed:</label>
+            <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
